@@ -16,11 +16,9 @@ export class WinnerModalComponent {
 
   public closeModal(): void {
     this.dialogRef.close(false);
-
   }
 
   public restartGame(): void {
     this.dialogRef.close(true);
-
   }
 }
