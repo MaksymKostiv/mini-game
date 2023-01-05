@@ -1,0 +1,25 @@
+<div class="container">
+  <header class="header">
+    <h1 class="header-text">Міні-гра</h1>
+    <div class="header-container">
+      <app-input [inputControl]="timeControl"></app-input>
+      <app-button [buttonText]="'Почати'" (click)="startGame()"></app-button>
+    </div>
+  </header>
+
+  <div class="score">
+    <h2 class="score-text">Рахунок :</h2>
+
+    <span> <img class="score-icon" src="../assets/icon/gamer.png" alt="gamer"> Гравець: {{playerScore}}</span> |
+    <span> <img class="score-icon" src="../assets/icon/laptop.png" alt="laptop"> Комп'ютер: {{computerScore}}</span>
+  </div>
+
+  <div class="mini-game">
+
+    <div class="mini-game-board">
+      <div class="mini-game-cell" *ngFor="let cell of cells"  [ngClass]="cell.color"
+           (click)="cellClicked(cell.id)"></div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Гра закiнчилась!</h1>
+<div mat-dialog-content>
+  Виграв: {{winner}}
+</div>
+<div mat-dialog-actions>
+  <app-button [buttonText]="'Ok'" (click)="closeModal()"></app-button>
+  <app-button [buttonText]="'Почати нову гру'" (click)="restartGame()"></app-button>
+</div>
